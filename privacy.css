@@ -1,0 +1,150 @@
+body {
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav .buttons a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 16px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+nav .buttons a:hover {
+  transform: scale(1.05);
+}
+
+nav .buttons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+nav .buttons a:hover::before {
+  animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+#privacy {
+  padding: 2rem 4rem;
+  font-weight: 400;
+}
+
+#privacy h3 {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#privacy h5 {
+  font-size: 20px;
+  color: #ffffffb3;
+  margin-top: 2rem;
+}
+
+#privacy p, #privacy ul {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffffb3;
+}
+
+#privacy ul {
+  padding-left: 1.5rem;
+}
+
+footer {
+  background: linear-gradient(black, #d9d9d942);
+  padding: 2rem;
+  margin-top: 100px;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#tagline {
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
